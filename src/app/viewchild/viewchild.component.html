@@ -1,0 +1,8 @@
+<div flex-container flex-center>
+    <pane id="Texas" *ngIf="shouldShow"></pane>
+    <pane id="California" *ngIf="!shouldShow"></pane>
+
+    <button (click)="toggle()" class="btn btn-primary">Toggle</button>
+
+    <div>Selected: {{selectedPane}}</div>
+</div>

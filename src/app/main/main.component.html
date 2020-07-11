@@ -1,0 +1,6 @@
+<div class="flex-container flex-column flex-center main-container">
+    <img (click)="displayHooks()" class="errorImg fade-in" src="../../assets/error.png"
+        *ngIf="showError && !showHooks" />
+    <img (click)="displayError()" src="../../assets/loc-logo.png" height="80" width="250" *ngIf="!showHooks" />
+    <img *ngIf="showHooks" class="fade-in" src="../../assets/hooks.png" />
+</div>

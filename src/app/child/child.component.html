@@ -1,0 +1,8 @@
+<div class="parent-container flex-container flex-center flex-column">
+    <h1>Parent</h1>
+    <div>{{message}}</div>
+    <div class="child-container">
+        <h3>Child</h3>
+        <child-component (output)="output($event)"></child-component>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+.parent-container {
+    border: 3px solid blue;
+    padding: 10px;
+    margin-top: 50px;
+
+    .child-container {
+        border: 3px solid red;
+        margin: 30px;
+        padding: 20px;
+    }
+}
