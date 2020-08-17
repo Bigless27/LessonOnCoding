@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { ViewChildComp } from './viewchild/viewchild.component';
 import { ParentComponent } from './child/child.component';
+import { TypeaheadComponent } from './typeahead/typeahead.component';
 
 
 const routes: Routes = [
-  { path: '', component: MainComponent, pathMatch: 'full' },
+  { path: '', component: TypeaheadComponent, pathMatch: 'full' },
   { path: 'viewchild', component: ViewChildComp },
-  { path: 'child', component: ParentComponent }
+  { path: 'child', component: ParentComponent },
+  { path: 'typeahead', component: TypeaheadComponent }
 ];
 
 @NgModule({

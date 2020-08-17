@@ -6,6 +6,9 @@ import { ViewChildComp } from './viewchild/viewchild.component';
 import { MainComponent } from './main/main.component';
 import { ParentComponent, ChildComponent } from './child/child.component';
 import { Pane } from './exampledirective/exampledirective.component';
+import { TypeaheadComponent } from './typeahead/typeahead.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { Pane } from './exampledirective/exampledirective.component';
     MainComponent,
     ParentComponent,
     ChildComponent,
-    Pane
+    Pane,
+    TypeaheadComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

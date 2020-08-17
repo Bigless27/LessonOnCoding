@@ -1,6 +1,4 @@
-import { Component, OnInit, NgModule, Input, Output, EventEmitter } from '@angular/core'
-import { BrowserModule } from '@angular/platform-browser'
-
+import { Component, OnInit, NgModule, Input, Output, EventEmitter, ChangeDetectorRef, AfterViewChecked, AfterContentChecked } from '@angular/core'
 
 @Component({
   selector: 'child-component',
@@ -9,10 +7,15 @@ import { BrowserModule } from '@angular/platform-browser'
 export class ChildComponent implements OnInit {
   @Output() output = new EventEmitter();
 
-  ngOnInit() {
-    this.output.emit({ value: "this does not trigget a new change detection" });
-    // setTimeout(() => { this.output.emit("this has been updated correctly by change detection") }, 1000);
+  constructor(public cd: ChangeDetectorRef) {
+
   }
+
+  ngOnInit() {
+    this.output.emit("this does not trigger a new change detection");
+  }
+
+
 }
 
 @Component({
@@ -23,8 +26,20 @@ export class ChildComponent implements OnInit {
 export class ParentComponent {
   public message;
 
+  constructor(private cd: ChangeDetectorRef) {
+
+  }
+
+  ngOnInit() {
+
+  }
+
   output(message) {
     this.message = message;
+  }
+
+  ngAfterContentChecked() {
+    this.cd.detectChanges();
   }
 }
 

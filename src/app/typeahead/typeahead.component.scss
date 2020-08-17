@@ -1,0 +1,33 @@
+.search-container {
+    width: 800px;
+
+    input {
+        height: 30px;
+        padding: 20px;
+        border: 2px solid purple
+    }
+
+    h1 {
+        margin: 10px 0px;
+    }
+
+    h3 {
+        margin: 10px;
+    }
+    .search-results {
+        color: maroon;
+        font-size: 20px;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .state-box {
+            padding: 20px;
+            border: 1px solid burlywood;
+            margin: 5px;
+        }
+
+        img {
+            margin: 0px 5px;
+        }
+    }
+}

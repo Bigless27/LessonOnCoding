@@ -24,11 +24,13 @@ export class ViewChildComp {
   set pane(v: Pane) {
     setTimeout(() => {
       this.selectedPane = v.id;
-    }, 0);
-    // this.selectedPane = v.id;
+    })
   }
+
   selectedPane: string = '';
+
   shouldShow = true;
+
   toggle() {
     this.shouldShow = !this.shouldShow;
   }

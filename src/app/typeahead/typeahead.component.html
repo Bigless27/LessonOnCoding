@@ -1,0 +1,13 @@
+<div class="flex-container flex-column search-container" [formGroup]="searchForm">
+    <h1 class="flex-container flex-center">SwitchMap Operator</h1>
+    <input type="text" id="search" placeholder="Search" name="search" formControlName="search" />
+    <h3>Results:</h3>
+    <div class="flex-container flex-center search-results">
+        <ng-container *ngFor="let state of states">
+            <div class="flex-container flex-column flex-center state-box">
+                <span>{{state.name}}</span>
+                <img height="80px" width="100px" [src]="state.flag" alt="flag">
+            </div>
+        </ng-container>
+    </div>
+</div>
